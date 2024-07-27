@@ -130,3 +130,18 @@ power = base ** exponent
 # Print the result
 print(f"Power result: {power}")
 
+
+# Problem 10:
+
+value = 12.34567
+
+# Round to the nearest integer
+nearest_integer = round(value)
+
+# Round to two decimal places
+two_decimal_places = round(value, 2)
+
+# Print the results
+print(f"Rounded to nearest integer: {nearest_integer}")
+print(f"Rounded to two decimal places: {two_decimal_places}")
+
