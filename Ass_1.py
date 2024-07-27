@@ -19,3 +19,15 @@ def compute_ages():
 ages = compute_ages()
 for friend, age in ages.items():
     print(f"{friend} is {age}")
+
+
+# Problem 2:
+
+name = "Alice"
+age = 30
+city = "New York"
+
+sentence = f"{name} is {age} years old and lives in {city}."
+print(sentence)
+
+
