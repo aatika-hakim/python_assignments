@@ -64,3 +64,14 @@ print(f"index of 'fox' is {index}")
 print(f"'the' {count_of_the}")
 
 
+# Problem 5:
+
+s = "I love programming in Java"
+print(f"original string: {s}")
+
+# Replace "Java" with "Python"
+modified_str = s.replace("Java", "Python")
+
+# Print the modified string
+print(f"Modified string: {modified_str}")
+
