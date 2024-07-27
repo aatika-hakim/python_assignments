@@ -48,3 +48,19 @@ print(capitalized)
 print(uppercase)
 print(lowercase)
 
+
+# Problem 4:
+
+s = "the quick brown fox jumps over the lazy dog"
+
+# Find the index of "fox"
+index = s.find("fox")
+
+# Count occurrences of "the"
+count_of_the = s.count("the")
+
+# Print results
+print(f"index of 'fox' is {index}")
+print(f"'the' {count_of_the}")
+
+
