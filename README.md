@@ -36,14 +36,18 @@
      Alice is 30 years old and lives in New York.
      ```
 
+## 3. **String Manipulation**
 
-    - **Task:** Given a floating-point number `value`
-      - Round `value` to the nearest integer.
-      - Round `value` to two decimal places.
-      ```python
-      value:float = 12.34567
-      ```
-    - **Expected Output:**
-      ```
-      Rounded to nearest integer: 12
-      Rounded to two decimal places: 12.35
+   - **Task:** Given the string `s`, use string methods to:
+     - **Capitalize the first letter:** make the first character uppercase and the rest of the string lowercase.
+     - **Convert to uppercase:** change all characters in the string to uppercase.
+     - **Convert to lowercase:** change all characters in the string to lowercase.
+     ```python
+     s:str = "hElLo WoRlD"
+     ```
+   - **Expected Output:**
+     ```
+     Hello world
+     HELLO WORLD
+     hello world
+     ```
