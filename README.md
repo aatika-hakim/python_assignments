@@ -20,3 +20,30 @@
      Drew is 6
      Ethan is 7
      ```
+
+
+## 2. **Formatted String Interpolation**
+
+   - **Task:** Given the variables `name`, `age`, and `city`, use f-strings to construct a sentence that describes a person using these variables.
+     ```python
+     name:str = "Alice"
+     age:int = 30
+     city:str = "New York"
+     ```
+   - **Instructions:** Use an f-string to create a sentence in the format: `"Alice is 30 years old and lives in New York."`
+   - **Expected Output:**
+     ```
+     Alice is 30 years old and lives in New York.
+     ```
+
+
+    - **Task:** Given a floating-point number `value`
+      - Round `value` to the nearest integer.
+      - Round `value` to two decimal places.
+      ```python
+      value:float = 12.34567
+      ```
+    - **Expected Output:**
+      ```
+      Rounded to nearest integer: 12
+      Rounded to two decimal places: 12.35
