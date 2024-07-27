@@ -31,3 +31,20 @@ sentence = f"{name} is {age} years old and lives in {city}."
 print(sentence)
 
 
+# Problem 3:
+s = "hElLo WoRlD"
+
+# Capitalize the first letter of the words
+capitalized = s.capitalize()
+
+# Convert string to uppercase
+uppercase = s.upper()
+
+# Convert string to lowercase
+lowercase = s.lower()
+
+# Print the results
+print(capitalized)
+print(uppercase)
+print(lowercase)
+
