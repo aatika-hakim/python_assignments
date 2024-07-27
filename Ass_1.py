@@ -109,3 +109,15 @@ print(left)
 right = stripped_string.rjust(20, '*')
 print(right)
 
+
+# Problem 8:
+num = 45
+
+# Convert int to binary
+binary = bin(num)
+
+# Print the result
+print(f"Binary Representation: {binary}")
+
+
+
