@@ -92,4 +92,20 @@ joined_string = ' '.join(substrings)
 print(joined_string)
 
 
+# Problem 7:
+s = "   Python is fun!   "
+
+# Remove leading & trailing spaces
+stripped_string = s.strip()
+
+# Print the stripped string
+print(stripped_string)
+
+# Left justify the string within a field of width 20, using * as the fill character.
+left = stripped_string.ljust(20, '*')
+print(left)
+
+# Right justify the string within a field of width 20, using * as the fill character.
+right = stripped_string.rjust(20, '*')
+print(right)
 
