@@ -75,3 +75,21 @@ modified_str = s.replace("Java", "Python")
 # Print the modified string
 print(f"Modified string: {modified_str}")
 
+
+#  Problem 6:
+s = "apple,banana,cherry,dates"
+
+# Split string into a list of substrings
+substrings = s.split(',')
+
+# Print list of substrings
+print(substrings)
+
+# Joined list of substrings into a single string with spaces
+joined_string = ' '.join(substrings)
+
+# Print joined string
+print(joined_string)
+
+
+
