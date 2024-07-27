@@ -120,4 +120,13 @@ binary = bin(num)
 print(f"Binary Representation: {binary}")
 
 
+# Problem 9:
+base = 3
+exponent = 4
+
+# Compute base raised to the power of exponent
+power = base ** exponent
+
+# Print the result
+print(f"Power result: {power}")
 
