@@ -19,5 +19,15 @@ sum_of_numbers = first_number + second_number
 print("The sum of the two numbers is:", sum_of_numbers)
 
 
+# 2. **Agreement Boot**
+
+#    Write a program which asks the user what their favorite animal is, and then always responds with "My favorite animal is also \_\_\_!" (the blank should be filled in with the user-inputted animal, of course).
+
+favorite_animal: str = input("What's your favorite animal? ")
+
+if favorite_animal.strip():
+    print(f"My favorite animal is also {favorite_animal}!")
+else:
+    print("You didn't enter an animal.")
 
 
