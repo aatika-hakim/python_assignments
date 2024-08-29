@@ -1,13 +1,20 @@
-def display_students(students):
+from typing import Dict, Union, Optional
+
+# Define a type alias for student data
+StudentData = Dict[str, Union[str, Optional[int]]]
+StudentsDict = Dict[int, StudentData]
+
+def display_students(students: StudentsDict) -> None:
     """ Display all students in the database """
     if students:
         print("\n--- Student Database ---")
         for student_id, data in students.items():
-            print(f"ID: {student_id}, Name: {data['name']}, Age: {data['age']}, Grade: {data['grade']}")
+            age = data['age'] if data['age'] is not None else "N/A"
+            print(f"ID: {student_id}, Name: {data['name']}, Age: {age}, Grade: {data['grade']}")
     else:
         print("The database is empty.")
 
-def add_student(students):
+def add_student(students: StudentsDict) -> None:
     """ Add a new student to the database """
     while True:
         student_id = len(students) + 1
@@ -18,23 +25,43 @@ def add_student(students):
         if any(student['name'].lower() == name.lower() for student in students.values()):
             print("This name is already in the database.")
             continue
-        age = input("Enter the student's age: ").strip()
+        age_str = input("Enter the student's age: ").strip()
         grade = input("Enter the student's grade: ").strip()
+
+        # Ensure age is an integer if provided
+        age: Optional[int] = None
+        if age_str:
+            try:
+                age = int(age_str)
+            except ValueError:
+                print("Invalid age. Age must be an integer.")
+                continue
+
         students[student_id] = {'name': name, 'age': age, 'grade': grade}
         print(f"Added student {name} with ID {student_id}.")
         break
 
-def update_student(students):
+def update_student(students: StudentsDict) -> None:
     """ Update an existing student's details """
-    student_id = int(input("Enter the ID of the student to update: ").strip())
+    student_id_str = input("Enter the ID of the student to update: ").strip()
+    try:
+        student_id = int(student_id_str)
+    except ValueError:
+        print("Invalid ID. ID must be an integer.")
+        return
+
     if student_id in students:
         print(f"Updating details for student ID {student_id} ({students[student_id]['name']})")
         name = input("Enter the new name (leave blank to keep current): ").strip()
         if name:
             students[student_id]['name'] = name
-        age = input("Enter the new age (leave blank to keep current): ").strip()
-        if age:
-            students[student_id]['age'] = age
+        age_str = input("Enter the new age (leave blank to keep current): ").strip()
+        if age_str:
+            try:
+                students[student_id]['age'] = int(age_str)
+            except ValueError:
+                print("Invalid age. Age must be an integer.")
+                return
         grade = input("Enter the new grade (leave blank to keep current): ").strip()
         if grade:
             students[student_id]['grade'] = grade
@@ -42,18 +69,24 @@ def update_student(students):
     else:
         print("Student ID not found.")
 
-def delete_student(students):
+def delete_student(students: StudentsDict) -> None:
     """ Delete a student from the database """
-    student_id = int(input("Enter the ID of the student to delete: ").strip())
+    student_id_str = input("Enter the ID of the student to delete: ").strip()
+    try:
+        student_id = int(student_id_str)
+    except ValueError:
+        print("Invalid ID. ID must be an integer.")
+        return
+
     if student_id in students:
         del students[student_id]
         print(f"Deleted student ID {student_id}.")
     else:
         print("Student ID not found.")
 
-def manage_student_db():
+def manage_student_db() -> None:
     """ Main function to manage student database with CRUD operations """
-    students = {}
+    students: StudentsDict = {}
     
     print("Welcome to the Student Database Manager!")
     print("You can perform CRUD operations on the student database.")
