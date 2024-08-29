@@ -1,10 +1,13 @@
 import random
 
 # Const
-ROUNDS = 5
+ROUNDS = 3
 
 def play_game():
-    # Introduction
+    
+    """
+    Play the High-Low Game.
+    """
     print("Welcome to the High-Low Game!")
     print("--------------------------------")
 
@@ -20,12 +23,11 @@ def play_game():
         print(f"Your number is {player_number}")
 
         # Get player's guess
-        guess = input("Do you think your number is higher or lower than the computer's?: ").strip().lower()
-
-        # Ensure the input is valid
-        while guess not in ["higher", "lower"]:
+        while True:
+            guess = input("Do you think your number is higher or lower than the computer's?: ").strip().lower()
+            if guess in ["higher", "lower"]:
+                break
             print("Please enter either 'higher' or 'lower': ")
-            guess = input().strip().lower()
 
         # Check if the player's guess is correct
         if (guess == "higher" and player_number > computer_number) or \
