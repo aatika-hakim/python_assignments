@@ -11,7 +11,7 @@ def play_game():
     score = 0
 
     for round_number in range(1, ROUNDS + 1):
-        # Generate random numbers for the player and the computer
+        # Generate random numbers
         player_number = random.randint(1, 100)
         computer_number = random.randint(1, 100)
 
